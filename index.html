@@ -99,21 +99,21 @@
     </header>
     <section class="main bg-black">
         <div class="main__menu">
-            <a class="main__menu__item">
+            <a href=#main__astra-linux class="main__menu__item">
                 ГЛАВНАЯ
             </a>
-            <a class="main__menu__item">
+            <a href=#advantages class="main__menu__item">
                 ПРИЕМУЩЕСТВА
             </a>
-            <a class="main__menu__item">
+            <a href=#program class="main__menu__item">
                 ПРОГРАММА
             </a>
-            <a class="main__menu__item">
+            <a href=#courses class="main__menu__item">
                 КУРСЫ
             </a>
         </div>
         <div class="a-cont">
-            <div class="main__astra-linux">
+            <div class="main__astra-linux" id="main__astra-linux">
                 <div class="astra__linux__left">
                     <div class="astra__linux__title">
                         Astra Linux
@@ -126,9 +126,9 @@
                         входа в интерфейс до администрирования пользователей и групп - узнаете принципы работы системы и
                         ее отличие от Windows.
                     </div>
-                    <div class="astra__linux__btn">
+                    <a href=#feedback__lead class="astra__linux__btn">
                         Записаться
-                    </div>
+                    </a>
                 </div>
                 <div class="astra__linux__right">
                     <img src="/astra/img/logo2.svg" class="astra__linux__logo">
@@ -137,7 +137,7 @@
         </div>
         <div class="ticker"></div>
     </section>
-    <section class="advantages bg-black grad">
+    <section class="advantages bg-black grad" id="advantages">
         <div class="a-cont">
             <div class="advantages__title">
                 Почему стоит обучаться у нас?
@@ -173,7 +173,7 @@
             </div>
         </div>
     </section>
-    <section class="courses bg-black">
+    <section class="courses bg-black" id="courses">
         <div class="a-cont">
             <div class="courses__title">
                 Входящие курсы
@@ -205,9 +205,9 @@
                             <div class="courses__card__desc">
                                 На нашем курсе вы в сжатые сроки получите навыки по управлению системой Astra...
                             </div>
-                            <div class="courses__card__btn active">
+                            <a href=#program class="courses__card__btn active">
                                 Подробнее
-                            </div>
+                            </a>
                         </div>
                         <div class="courses__card">
                             <img class="courses__card__img" src="/astra/img/card-img2.png">
@@ -225,9 +225,9 @@
                             <div class="courses__card__desc">
                                 На нашем курсе вы в сжатые сроки получите навыки по управлению системой Astra...
                             </div>
-                            <div class="courses__card__btn">
+                            <a href=#program class="courses__card__btn">
                                 Подробнее
-                            </div>
+                            </a>
                         </div>
                         <div class="courses__card">
                             <img class="courses__card__img" src="/astra/img/card-img3.png">
@@ -245,9 +245,9 @@
                             <div class="courses__card__desc">
                                 На нашем курсе вы в сжатые сроки получите навыки по управлению системой Astra...
                             </div>
-                            <div class="courses__card__btn">
+                            <a href=#program class="courses__card__btn">
                                 Подробнее
-                            </div>
+                            </a>
                         </div>
                         <div class="courses__card">
                             <img class="courses__card__img" src="/astra/img/card-img1.png">
@@ -289,9 +289,9 @@
                             <div class="courses__card__desc">
                                 На нашем курсе вы в сжатые сроки получите навыки по управлению системой Astra...
                             </div>
-                            <div class="courses__card__btn active">
+                            <a href=#program class="courses__card__btn active">
                                 Подробнее
-                            </div>
+                            </a>
                         </div>
                         <div class="courses__card">
                             <img class="courses__card__img" src="/astra/img/card-img5.png">
@@ -309,16 +309,16 @@
                             <div class="courses__card__desc">
                                 На нашем курсе вы в сжатые сроки получите навыки по управлению системой Astra...
                             </div>
-                            <div class="courses__card__btn">
+                            <a href=#program class="courses__card__btn">
                                 Подробнее
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="program bg-black grad">
+    <section class="program bg-black grad" id="program">
         <div class="a-cont">
             <div class="program__title">
                 Программа обучения
@@ -495,16 +495,19 @@
                     <div class="program__content__btn__select__wrap">
                         <select class="program__content__btn__select">
                             <option value="remote">
-                                Дистанционно
+                                Индивидуально
                             </option>
                             <option value="full-time">
                                 Очно
                             </option>
+                            <option value="full-time">
+                                Онлайн
+                            </option>
                         </select>
                     </div>
-                    <div class="program__content__btn__enroll">
+                    <a href=#feedback__lead class="program__content__btn__enroll">
                         Записаться
-                    </div>
+                    </a>
                     <div class="program__content__btn__buy">
                         Купить
                     </div>
@@ -513,7 +516,7 @@
             </div>
         </div>
     </section>
-    <section class="feedback__lead bg-black grad">
+    <section class="feedback__lead bg-black grad" id="feedback__lead">
         <div class="a-cont">
             <div class="feedback__lead__title">
                 Запишись на бесплатное занятие
@@ -539,27 +542,28 @@
                     </div>
                 </div>
                 <div class="feedback__lead__right">
-                    <form class="feedback__lead__form">
+                    <form class="feedback__lead__form" onsubmit="return false;">
                         <div class="feedback__lead__form__titile">
                             Ваши персональные данные
                         </div>
                         <div class="feedback__lead__form__input__name">
                             Имя
                         </div>
-                        <input class="feedback__lead__form__input" type="text" placeholder="Вовчик">
+                        <input class="feedback__lead__form__input" type="text" placeholder="Имя">
                         <div class="feedback__lead__form__input__name">
                             Фамилия
                         </div>
-                        <input class="feedback__lead__form__input" type="text" placeholder="Рябокошкин">
+                        <input class="feedback__lead__form__input" type="text" placeholder="Фамилия">
                         <div class="feedback__lead__form__input__name">
                             Телефон
                         </div>
-                        <input class="feedback__lead__form__input" type="text" placeholder="+7 (***) *** - ** - **">
+                        <input class="feedback__lead__form__input" type="text" placeholder="+7 (***) *** - ** - **"
+                            id="phone">
                         <div class="feedback__lead__form__input__name">
                             Email
                         </div>
-                        <input class="feedback__lead__form__input" type="text" placeholder="******@mail.ru">
-                        <input type="submit" value="Отправить" class="feedback__lead__form__btn">
+                        <input class="feedback__lead__form__input" type="text" placeholder="******@mail.ru" id="email">
+                        <input type="submit" value="Отправить" class="feedback__lead__form__btn" id="btn__submit">
                     </form>
                 </div>
             </div>
@@ -1261,10 +1265,25 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__close">
+            </div>
+            <div class="modal__content__title">
+                Спасибо!
+            </div>
+            <div class="modal__content__desc">
+                Наши менеджеры
+                свяжутся с вами в ближайшее время
+            </div>
+
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/astra/plagins/inputmask.js"></script>
     <script src="/astra/script.js"></script>
 </body>
 

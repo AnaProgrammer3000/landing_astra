@@ -14,6 +14,22 @@ $('.program__name').click(function() {
   $(this).toggleClass('active')
 })
 
+$('.modal__close').click(function() {
+  $('.modal').removeClass('active')
+})
+
+$('.modal').click(function() {
+  $('.modal').removeClass('active')
+})
+
+$('#btn__submit').click(function() {
+  $('.modal').addClass('active')
+})
+
+$('.modal__content').click(function(e) {
+  e.stopPropagation()
+})
+
 $('.FAQ__content__wrap').click(function() {
   $(this).toggleClass('active')
 })
@@ -109,3 +125,7 @@ $('.slider').slick({
     ]
   });
 
+  $(function() {
+    $("#phone").inputmask("+7(999)999-99-99");
+    $("#email").inputmask("*{3,30}@*{4,20}.*{2,7}");
+  });

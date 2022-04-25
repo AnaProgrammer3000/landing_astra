@@ -468,6 +468,8 @@ header {
      font-size: 16px;
      line-height: 19px;
      text-transform: uppercase;
+     text-decoration: none;
+     color: #fff;
 }
 
 .main__astra-linux {
@@ -514,6 +516,7 @@ header {
      padding: 10px 61px 10px 33px;
      position: relative;
      cursor: pointer;
+     text-decoration: none;
 }
 
 .astra__linux__btn::before {
@@ -549,11 +552,11 @@ header {
 
 @-webkit-keyframes ticker {
      0% {
-          transform: translateX(0%);
+          transform: translateX(-30%);
      }
 
      100% {
-          transform: translateX(-30%);
+          transform: translateX(0%);
      }
 }
 
@@ -817,6 +820,8 @@ body .courses__card {
      box-sizing: border-box;
      position: relative;
      cursor: pointer;
+     text-decoration: none;
+     display: block;
 }
 
 .courses__card__btn::before {
@@ -1236,6 +1241,7 @@ body .slick-prev::before {
      background: linear-gradient(99.74deg, #06DBAC 5.23%, #BD00FF 92.7%);
      border-radius: 20px;
      padding: 28px 93px;
+     text-decoration: none;
 }
 
 .program__content__btn__buy {
@@ -2204,6 +2210,77 @@ footer {
      display: none;
 }
 
+.discount__cards {
+     margin: 80px 30px 0 0;
+}
+
+.modal.active {
+     display: flex;
+}
+
+.modal {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(40, 40, 40, 0.75);
+     justify-content: center;
+     align-items: center;
+     z-index: 5;
+     display: none;
+}
+
+.modal__content {
+     width: 731px;
+     height: 245px;
+     background: #0A0A0A;
+     border: 1px solid #E7E7E7;
+     box-sizing: border-box;
+     border-radius: 40px;
+     padding: 48px 95px 70px;
+     position: relative;
+}
+
+.modal__content::before {
+     position: absolute;
+     content: '';
+     display: block;
+     background: url(/astra/img/head.svg) no-repeat center;
+     top: 49px;
+     right: 0;
+     width: 312px;
+     height: 131px;
+
+}
+
+.modal__content__title {
+     font-weight: 700;
+     font-size: 42px;
+     line-height: 50px;
+     color: #FFFFFF;
+     margin: 0 0 26px 0;
+}
+
+.modal__content__desc {
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 30px;
+     color: rgba(255, 255, 255, 0.7);
+     width: 380px;
+}
+
+.modal__close {
+     position: absolute;
+     display: block;
+     background: url(/astra/img/close.svg) no-repeat center;
+     top: 31px;
+     right: 47px;
+     width: 20px;
+     height: 20px;
+     cursor: pointer;
+}
+
 @media (max-width: 1240px) {
 
      .slick-arrow {
@@ -2322,9 +2399,15 @@ footer {
           width: 400px;
      }
 
-     .astra__linux__title, .courses__title, .program__title,
-     .feedback__lead__title, .products__title, .discount__title,
-     .learning__formats__title, .gallery__right__title, .teacher__title {
+     .astra__linux__title,
+     .courses__title,
+     .program__title,
+     .feedback__lead__title,
+     .products__title,
+     .discount__title,
+     .learning__formats__title,
+     .gallery__right__title,
+     .teacher__title {
           font-size: 48px;
           line-height: 59px;
      }
@@ -2354,7 +2437,9 @@ footer {
           line-height: 26px;
      }
 
-     section.courses, section.products, section.discount {
+     section.courses,
+     section.products,
+     section.discount {
           overflow: hidden;
      }
 
@@ -2383,13 +2468,16 @@ footer {
           line-height: 28px;
      }
 
-     .program__content__date, .program__content__time,
-     .program__content__price, .program__content__value {
+     .program__content__date,
+     .program__content__time,
+     .program__content__price,
+     .program__content__value {
           font-size: 16px;
           line-height: 19px;
      }
 
-     .program__content__date::before, .program__content__time::before {
+     .program__content__date::before,
+     .program__content__time::before {
           top: -7px;
      }
 
@@ -2427,9 +2515,6 @@ footer {
           content: none;
      }
 
-     .discount__cards {
-          margin: 0 30px 0 0;
-     }
 
      .learning__formats__title {
           margin: 0 0 72px 0;
@@ -2524,11 +2609,49 @@ footer {
      }
 }
 
-@media (max-width: 760px){
+@media (max-width: 760px) {
 
      .astra__linux__logo {
           width: 300px;
      }
+
+     .modal {
+          padding: 0 26px;
+     }
+
+     .modal__content {
+          width: 288px;
+          height: 245px;
+          padding: 21px 36px 127px;
+     }
+
+     .modal__close {
+          width: 14px;
+          height: 14px;
+          top: 28px;
+          right: 28px;
+     }
+
+     .modal__content__title {
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+     }
+
+     .modal__content__desc {
+          max-width: 216px;
+          font-size: 14px;
+          line-height: 21px;
+     }
+
+     .modal__content::before {
+          top: 110px;
+          width: 254px;
+          height: 106px;
+          background-size: contain;
+          right: -1px;
+     }
+
 }
 
 @media (max-width: 620px) {
@@ -2559,9 +2682,17 @@ footer {
           left: 5%;
      }
 
-     .astra__linux__title, .advantages__title, .courses__title, .program__title, 
-     .feedback__lead__title, .products__title, .discount__title, .learning__formats__title,
-     .gallery__right__title, .teacher__title, .FAQ__title {
+     .astra__linux__title,
+     .advantages__title,
+     .courses__title,
+     .program__title,
+     .feedback__lead__title,
+     .products__title,
+     .discount__title,
+     .learning__formats__title,
+     .gallery__right__title,
+     .teacher__title,
+     .FAQ__title {
           font-size: 32px;
           line-height: 39px;
      }
@@ -2592,7 +2723,11 @@ footer {
           padding: 49px 0 81px 0;
      }
 
-     .advantages__title, .courses__title, .learning__formats__title, .teacher__title, .FAQ__title {
+     .advantages__title,
+     .courses__title,
+     .learning__formats__title,
+     .teacher__title,
+     .FAQ__title {
           margin: 0 0 45px 0;
      }
 
@@ -2614,7 +2749,8 @@ footer {
           border-radius: 50px;
      }
 
-     .program__content__time, .program__content__right {
+     .program__content__time,
+     .program__content__right {
           display: none;
      }
 
@@ -2622,8 +2758,13 @@ footer {
           padding: 0;
      }
 
-     .program__content__title, .program__content__wrap, .program__content__text,
-     .program__content__desc, .program__content__prog-courses, .program__content__skills, .program__content__btn__wrap {
+     .program__content__title,
+     .program__content__wrap,
+     .program__content__text,
+     .program__content__desc,
+     .program__content__prog-courses,
+     .program__content__skills,
+     .program__content__btn__wrap {
           padding: 0 13px;
      }
 
@@ -2653,7 +2794,10 @@ footer {
           padding: 0;
      }
 
-     .program__content__btn__select__wrap, .program__content__btn__enroll, .program__content__btn__buy, .program__content__btn__select {
+     .program__content__btn__select__wrap,
+     .program__content__btn__enroll,
+     .program__content__btn__buy,
+     .program__content__btn__select {
           width: 100%;
           box-sizing: border-box;
           text-align: center;
@@ -2705,7 +2849,10 @@ footer {
           width: 108px;
      }
 
-     .wrap1, .wrap2, .wrap3, .wrap4 {
+     .wrap1,
+     .wrap2,
+     .wrap3,
+     .wrap4 {
           position: relative;
           top: 0;
           left: 0;
@@ -2767,7 +2914,8 @@ footer {
           width: 23px;
      }
 
-     .teacher, .learning__formats {
+     .teacher,
+     .learning__formats {
           padding: 0;
      }
 
@@ -2787,9 +2935,8 @@ footer {
      }
 
      body section.grad::before {
-          width: 150px!important;
-          height: 150px!important;
-          filter: blur(100px)!important;
+          width: 150px !important;
+          height: 150px !important;
+          filter: blur(100px) !important;
      }
 }
-
